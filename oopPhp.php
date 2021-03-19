@@ -23,30 +23,35 @@ $bus= new Vehicle();
 $bus->wheels= 6;
 print_r($bus);
 echo '<br>';
-$car->vehicleName('bus');
+$bus->vehicleName('bus');
 
 // constructors & destructors
 
-// class Vehicle{
-//     public $wheels;
-//     public function __construct($wheel)
-//     {
-//         $this->wheels= $wheel; //5
-//     }
+class Vehicle2{
+    public $wheels;
+    public function __construct($wheel)
+    {
+        $this->wheels= $wheel;
+    }
+    public function vehicleName2($name){
+        echo "The name of this vehicle is $name".'<br>';
+    }
+    public function __destruct(){
 
-//     public function vehicleName($name){
-//         echo "The name of this vehicle is $name";
-//     }
+    }
+}
 
-//     public function __destruct(){
+$car= new Vehicle2(4);
+// $car->wheels= 4;
+print_r($car);
+echo '<br>';
+$car->vehicleName2('car');
 
-//     }
-// }
-
-// $car= new Vehicle('5');
-// //$car->wheels= 4;
-// print_r($car);
-// $car->vehicleName('car');
+$bus= new Vehicle2(6);
+// $bus->wheels= 6;
+print_r($bus);
+echo '<br>';
+$bus->vehicleName2('bus');
 
 // class Vehicle{
 //     public $wheels;
