@@ -37,4 +37,70 @@ $half= 0.5;
 $result= $half*2+2;
 $val= "The result is : ".$result/2;
 echo $val;
+echo '<br>';
+// array using []
+$arr = ['Sabrina', 'Naorin', 'Sumona'];
+// cant echo the array at once as echo print a string at a time
+// echo arr;
+// we can use print_r() to print the array at once
+print_r($arr);
+echo '<br>';
+// but we can print any index value by using echo
+echo $arr[0];
+echo '<br>';
+echo $arr[2];
+echo '<br>';
+// another way to declare array
+$arr1 = array('Minu', 'Tinu', 'Tushi');
+print_r($arr1[2]);
+echo '<br>';
+// key of index declaration of array
+$arr2 = array('1st'=>'Minu', '2nd'=>'Tinu', '3rd'=>'Tushi');
+print_r($arr2['1st']);
+echo '<br>';
+$arr3= ['1st'=>'Sabrina', '2nd'=>'Naorin', '3rd'=>'Sumona'];
+print_r($arr3);
+echo '<br>';
+echo $arr3['1st'];
+echo '<br>';
+echo $arr3['2nd'];
+echo '<br>';
+echo $arr3['3rd'];
+echo '<br>';
+// we can update an array value
+$arr3['3rd'] = 'Sumu';
+print_r($arr3['3rd']);
+echo '<br>';
+print_r($arr3);
+echo '<br>';
+// for loop 
+for($i=0; $i<=10; $i++){
+    echo "1 * $i = ".$i."<br>";
+}
+echo "For Loop closed.";
+echo '<br>';
+// while loop
+$i=0;
+$number= ['8', '9', '2', '4', '7'];
+// count() counts the no. of the array
+while($i<=2*count($number)){ 
+    echo "1 * $i = ".$i."<br>";
+    $i++;
+}
+echo "While Loop closed.";
+echo '<br>';
+// for each loop
+// this loop traverse a array for each index
+// it's does not require any loop control variable
+$fruits= ['mango', 'banana', 'apple', 'Lichi'];
+foreach($fruits as $fruit){
+    echo $fruit.'<br>';
+}
+echo "For each Loop closed.<br>";
+$relatives= ['Father'=>'Muslem', 'Mother'=>'Rumisa', 'Sister'=>'Rumana', 'Brother'=>'Maruf'];
+foreach($relatives as $key=> $val){
+    echo $key.'\'s name is '.$val.'<br>';
+}
+echo "For each Loop closed.";
+echo '<br>';
 ?>
